@@ -1,0 +1,14 @@
+<ion-view view-title="Chats">
+	<ion-content>
+	    <div id="transparent" /></div>
+	    <ion-list>
+	      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="section in sections" type="item-text-wrap" href="{{section.url}}">
+	        <img ng-src="{{section.icon}}">
+	        <h2>{{section.name}}</h2>
+	        <!--<p>{{section.lastText}}</p>-->
+	        <i class="icon ion-chevron-right icon-accessory"></i>
+
+	      </ion-item>
+	    </ion-list>
+	</ion-content>
+</ion-view>
