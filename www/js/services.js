@@ -55,30 +55,40 @@ angular.module('starter.services', [])
   // Some fake testing data
   var sections = [{
     id: 0,
-    name: '',
-    icon: '',
+    name: 'INICIO',
+    icon: './img/inicio.png',
     url: '',
     lastText: ''
   }, {
     id: 1,
-    name: '',
-    icon: '',
-    url: '',
+    name: 'WEB',
+    icon: './img/web.png',
+    url: 'desarrollo-web',
     lastText: ''
   }, {
-    name: '',
-    icon: '',
-    url: '',
+    name: 'DISEÑO',
+    icon: './img/diseno.png',
+    url: 'diseno-grafico',
     lastText: ''
   }, {
-    name: '',
-    icon: '',
-    url: '',
+    name: 'ARQUITECTURA',
+    icon: './img/arquitectura.png',
+    url: 'aquitectura',
     lastText: ''
   }, {
-    name: '',
-    icon: '',
-    url: '',
+    name: 'PLANES',
+    icon: './img/planes.png',
+    url: 'planes',
+    lastText: ''
+  }, {
+    name: 'PORTAFOLIO',
+    icon: './img/portafolio.png',
+    url: 'portafolio',
+    lastText: ''
+  }, {
+    name: 'CONTACTO',
+    icon: './img/contacto.png',
+    url: 'contacto',
     lastText: ''
   }];
 
