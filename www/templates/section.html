@@ -1,7 +1,18 @@
 <ion-view view-title="section">
 	<ion-content>
 	    
-	    <iframe src="http://keypanelservices.com/codepein/" width="500" height="200"></iframe>
+        <ion-slide-box auto-play="true" show-pager="true" does-continue="true">
+            <ion-slide>
+              <div class="box yellow"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box green"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box red"></div>
+            </ion-slide>
+        </ion-slide-box>
+        
 	    <ion-list>
 	      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="section in sections" type="item-text-wrap" href="http://keysystems.com.ve/{{section.url}}">
 	        <img ng-src="{{section.icon}}">

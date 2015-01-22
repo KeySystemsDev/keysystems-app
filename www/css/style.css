@@ -30,11 +30,6 @@
   margin: 0px;
 }
 
-.kk{
-	font-size: 100px;
-}
-
-
 @-moz-keyframes spin { 
   0% { 
     -webkit-transform:rotateZ(0deg)scale3d(1,1,1); 
@@ -158,7 +153,6 @@ HTML, BODY {
 BODY {
   background: #082330;
   background-size: .12em 100%;
-  font: 16em/1 Arial;
 }
 
 .text--line {
@@ -212,4 +206,35 @@ svg {
     stroke-dashoffset: 35%;
     stroke-dasharray: 0 87.5%;
   }
+}
+.slider { 
+    height: 200px; 
+    text-align: center;
+}
+.slider-pager-page i{
+    font-size: 8px;
+}
+.slider-pager .slider-pager-page{
+    /*color: #fff;*/
+    width: 7px;
+}
+.scroll { 
+    height: 100% 
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
 }
