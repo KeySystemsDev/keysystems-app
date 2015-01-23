@@ -13,14 +13,112 @@
             </ion-slide>
         </ion-slide-box>
         
-	    <ion-list>
+	    <!--<ion-list>
 	      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="section in sections" type="item-text-wrap" href="http://keysystems.com.ve/{{section.url}}">
 	        <img ng-src="{{section.icon}}">
 	        <h2>{{section.name}}</h2>
 	        <p>{{section.lastText}}</p>
 	        <i class="icon ion-chevron-right icon-accessory"></i>
-
 	      </ion-item>
-	    </ion-list>
+	    </ion-list>-->
+
+	    <div class="item item-avatar item-icon-right" ng-click="incio = !incio">
+            <img ng-src="img/inicio.png">
+            <h2 class="h2-top">INICIO</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="incio">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                Enter home address
+              </a>
+            </div>
+        </div>
+
+        <div class="item item-avatar item-icon-right" ng-click="web = !web">
+            <img ng-src="./img/web.png">
+            <h2 class="h2-top" >WEB</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="web">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                hola
+              </a>
+            </div>
+        </div>
+
+        <div class="item item-avatar item-icon-right" ng-click="diseno = !diseno">
+            <img ng-src="./img/diseno.png">
+            <h2 class="h2-top">DISEÑO</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="diseno">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                hola
+              </a>
+            </div>
+        </div>
+
+        <div class="item item-avatar item-icon-right" ng-click="arquitectura = !arquitectura">
+            <img ng-src="./img/arquitectura.png">
+            <h2 class="h2-top">ARQUITECTURA</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="arquitectura">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                hola
+              </a>
+            </div>
+        </div>
+
+        <div class="item item-avatar item-icon-right" ng-click="planes = !planes">
+            <img ng-src="./img/planes.png">
+            <h2 class="h2-top">PLANES</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="planes">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                hola
+              </a>
+            </div>
+        </div>
+
+        <div class="item item-avatar item-icon-right" ng-click="portafolio = !portafolio">
+            <img ng-src="./img/portafolio.png">
+            <h2 class="h2-top">PORTAFOLIO</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="portafolio">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                hola
+              </a>
+            </div>
+        </div>
+
+        <div class="item item-avatar item-icon-right" ng-click="contacto = !contacto">
+            <img ng-src="./img/contacto.png">
+            <h2 class="h2-top">CONTACTO</h2>
+            <i class="icon ion-chevron-down icon-accessory"></i>
+        </div>
+        <div class="item item-body" ng-show="contacto">
+            <div class="list">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                hola
+              </a>
+            </div>
+        </div>		
+
 	</ion-content>
 </ion-view>
