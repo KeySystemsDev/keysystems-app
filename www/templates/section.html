@@ -1,16 +1,24 @@
 <ion-view view-title="section">
 	<ion-content>
 	    
-        <ion-slide-box auto-play="true" show-pager="true" does-continue="true">
+        <ion-slide-box>
             <ion-slide>
-              <div class="box yellow"></div>
+                <div class="box blue-key">
+                    <div class="box-content">
+                        <div class="profile-picture"><img src="img/logo-key.png"/></div>
+                        <div class="box-white"><h2 class="h2-name">KEY SYSTEMS</h2></div>
+                    </div>
+                </div>
             </ion-slide>
             <ion-slide>
-                <div class="box green"></div>
+                <div class="box blue-key">
+                    <div class="box-content">
+                    <div class="box-white"><p>Javascript Frontend Engineer at Recruiterbox</p></div>
+                    <div class="box-white"><h4 class="h4-local">Venezuela</h4></div>
+                    </div>
+                </div>
             </ion-slide>
-            <ion-slide>
-                <div class="box red"></div>
-            </ion-slide>
+
         </ion-slide-box>
         
 	    <!--<ion-list>
@@ -29,10 +37,8 @@
         </div>
         <div class="item item-body" ng-show="incio">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                Enter home address
-              </a>
+                Key Systems trae para ti servicios de gran alcance para solucionar tus problemas, aumentar tus ventas y disminuirte los gastos, propiciando un mayor rendimiento a los sectores que te enfrentas a diario.
+
             </div>
         </div>
 
@@ -43,10 +49,7 @@
         </div>
         <div class="item item-body" ng-show="web">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                hola
-              </a>
+                Implementamos desarrollos con nuevas tecneologias para el desarrollo de páginas webs, tiendas virtuales basandonos en estandares y plataformas universales que permiten ser exponenciales a traves del tiempo. Dentro de nuestros desarrollos podras obtener la adaptación a tablets, móvil y escritorio con un solo desarrollo.
             </div>
         </div>
 
@@ -57,10 +60,7 @@
         </div>
         <div class="item item-body" ng-show="diseno">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                hola
-              </a>
+                Aqui podrás encontrar un servicio completo para tu negocio, desde publicidad hasta el diseño de la papeleria completa. también ofrecemos videos promocionales animados para generar comerciales que pueden ser difundidos por las redes sociales de manera práctica y eficiente.
             </div>
         </div>
 
@@ -71,10 +71,7 @@
         </div>
         <div class="item item-body" ng-show="arquitectura">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                hola
-              </a>
+                Servicio completo de arquitectura, diseño de planos en 2D y 3D, recorridos virtuales, renderizados de espacios y ambientes, permisos sanitarios.
             </div>
         </div>
 
@@ -85,26 +82,44 @@
         </div>
         <div class="item item-body" ng-show="planes">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                hola
-              </a>
+                Manejamos planes para diferentes necesidades tanto para el desarrollode páginas web como para tiendas virtuales.
+                <p>Planes Web:</p>
+                <ul class="list">
+                    <li><i class="icon ion-checkmark"></i> Plan promocional: 2.999 +  Iva</li>
+                    <li><i class="icon ion-checkmark"></i>  Plan Bronce: 5.999 +  Iva</li>
+                    <li><i class="icon ion-checkmark"></i> Plan Plata: 9.999 +  Iva</li>
+                    <li><i class="icon ion-checkmark"></i> Plan Oro: 11.999 +  Iva</li>
+                </ul>
+                <p>Tiendas Virtuales</p>
+                <ul>
+                <li><i class="icon ion-checkmark"></i> Plan Bronce: 14.999 +  Iva</li>
+                <li><i class="icon ion-checkmark"></i> Plan Plata: 22.500 +  Iva</li>
+                <li><i class="icon ion-checkmark"></i> Plan Oro: 29.999 +  Iva</li>
+                </ul>
+
+                <p>Logos</p>
+                <ul>
+                <li><i class="icon ion-checkmark"></i> Bs 15.000 + Iva</li>
+                </ul>
+
+                <p>Estructura y Recorridos en 3D</p>
+                <ul>
+                <li><i class="icon ion-checkmark"></i> Bs 8.999 + Iva</li>
+                </ul>
             </div>
         </div>
 
-        <div class="item item-avatar item-icon-right" ng-click="portafolio = !portafolio">
+        <!--<div class="item item-avatar item-icon-right" ng-click="portafolio = !portafolio">
             <img ng-src="./img/portafolio.png">
             <h2 class="h2-top">PORTAFOLIO</h2>
             <i class="icon ion-chevron-down icon-accessory"></i>
         </div>
         <div class="item item-body" ng-show="portafolio">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                hola
-              </a>
+            hola
+
             </div>
-        </div>
+        </div>-->
 
         <div class="item item-avatar item-icon-right" ng-click="contacto = !contacto">
             <img ng-src="./img/contacto.png">
@@ -113,12 +128,21 @@
         </div>
         <div class="item item-body" ng-show="contacto">
             <div class="list">
-              <a href="#" class="item item-icon-left">
-                <i class="icon ion-home"></i>
-                hola
-              </a>
+                <ul>
+                    <li>Principal - Carrizal</li>
+                    <ul>Telefono: 
+                        <li>0416 -712.25.04 / +58 414 - 266.75.19</li>
+                    </ul>
+                    <li>Correo: contacto@keysystems.com.ve</li>
+                    <li>Web: www.keysystems.com.ve</li>
+                </ul>
             </div>
-        </div>		
+        </div>
 
+        <div class="item  blue-key center">
+            <h3 class="white " align="center">
+            © 2015 Key Systems C.A.</h3>
+        </div>
+        
 	</ion-content>
 </ion-view>
