@@ -20,11 +20,11 @@ body{
   background-position: 0px 0px;
   background-repeat: repeat-x;
   background-size:cover;
-  -webkit-animation:animatedBackground 10s linear infinite;
-   -moz-animation:animatedBackground 10s linear infinite;
-    -ms-animation:animatedBackground 10s linear infinite;
-     -o-animation:animatedBackground 10s linear infinite;
-        animation:animatedBackground 10s linear infinite;
+  -webkit-animation:animatedBackground 20s linear infinite;
+   -moz-animation:animatedBackground 20s linear infinite;
+    -ms-animation:animatedBackground 20s linear infinite;
+     -o-animation:animatedBackground 20s linear infinite;
+        animation:animatedBackground 20s linear infinite;
 }
 /**/
 .init-key{
