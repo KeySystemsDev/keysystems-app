@@ -44,4 +44,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/keysystems');
 
+})
+
+.directive('browseTo', function ($ionicGesture) {
+ return {
+  restrict: 'A',
+  link: function ($scope, $element, $attrs) {
+   var handleTap = function (e) {
+    // todo: capture Google Analytics here
+    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system');
+   };
+   var tapGesture = $ionicGesture.on('tap', handleTap, $element);
+   $scope.$on('$destroy', function () {
+    // Clean up - unbind drag gesture handler
+    $ionicGesture.off(tapGesture, 'tap', handleTap);
+   });
+  }
+ }
 });
