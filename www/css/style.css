@@ -258,7 +258,7 @@ svg {
     background-color: red;
 }
 .blue-key{
-    background-color: #142d35;
+    background-color: #000 !important;
 }
 .h2-top{
     padding-top: 10px;
