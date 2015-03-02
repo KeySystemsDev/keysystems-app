@@ -226,7 +226,7 @@ svg {
   }
 }
 .slider { 
-    height: 200px; 
+    height: 150px; 
     text-align: center;
 }
 .slider-pager-page i{
@@ -258,29 +258,24 @@ svg {
     background-color: red;
 }
 .blue-key{
-    background-color: #000 !important;
+	background: #7AD4EF;
 }
 .h2-top{
     padding-top: 10px;
     font-family: 'Comfortaa', cursive;
 }
-.h4-local{
-    font-family: 'Comfortaa', cursive;
-}
-.h2-name{
+.comfortaa{
     font-family: 'Comfortaa', cursive;
 }
 .profile-picture img{
-    /*border: 5px solid #fff;*/
     display: inline-block;
-    width: 80px;
-    height: 80px;
-    /*border-radius: 50%;*/
+    width: 120px;
+    height: 120px;
+    margin-top: -20px;
     vertical-align: middle;
 }
 .box-white h2, p, h4{
     color: white;
-    margin-top: 10px;
     /*text-shadow: 2px 0px 0px #000;*/
 }
 .box-content{
