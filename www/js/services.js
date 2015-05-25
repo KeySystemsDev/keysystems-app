@@ -1,60 +1,50 @@
 angular.module('starter.services', [])
 
-.factory('Sections', function() {
+.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var sections = [{
+  var chats = [{
     id: 0,
-    name: 'INICIO',
-    icon: './img/inicio.png',
-    url: '',
-    lastText: ''
+    name: 'Ben Sparrow',
+    lastText: 'You on your way?',
+    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
   }, {
     id: 1,
-    name: 'WEB',
-    icon: './img/web.png',
-    url: 'desarrollo-web',
-    lastText: ''
+    name: 'Max Lynx',
+    lastText: 'Hey, it\'s me',
+    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+  },{
+    id: 2,
+    name: 'Adam Bradleyson',
+    lastText: 'I should buy a boat',
+    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
   }, {
-    name: 'DISEÑO',
-    icon: './img/diseno.png',
-    url: 'diseno-grafico',
-    lastText: ''
+    id: 3,
+    name: 'Perry Governor',
+    lastText: 'Look at my mukluks!',
+    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
   }, {
-    name: 'ARQUITECTURA',
-    icon: './img/arquitectura.png',
-    url: 'aquitectura',
-    lastText: ''
-  }, {
-    name: 'PLANES',
-    icon: './img/planes.png',
-    url: 'planes',
-    lastText: ''
-  }, {
-    name: 'PORTAFOLIO',
-    icon: './img/portafolio.png',
-    url: 'portafolio',
-    lastText: ''
-  }, {
-    name: 'CONTACTO',
-    icon: './img/contacto.png',
-    url: 'contacto',
-    lastText: ''
+    id: 4,
+    name: 'Mike Harrington',
+    lastText: 'This is wicked good ice cream.',
+    face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
   }];
 
   return {
     all: function() {
-      return sections;
+      return chats;
     },
-    get: function(sectionId) {
-      for (var i = 0; i < sections.length; i++) {
-        if (sections[i].id === parseInt(sectionId)) {
-          return sections[i];
+    remove: function(chat) {
+      chats.splice(chats.indexOf(chat), 1);
+    },
+    get: function(chatId) {
+      for (var i = 0; i < chats.length; i++) {
+        if (chats[i].id === parseInt(chatId)) {
+          return chats[i];
         }
       }
       return null;
     }
-  }
+  };
 });
-

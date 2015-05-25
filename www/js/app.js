@@ -11,12 +11,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
+    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
+      StatusBar.styleLightContent();
     }
   });
 })
@@ -29,36 +29,65 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  .state('initkey', {
-       url: "/keysystems",
-       templateUrl: "templates/init-key.html",
-       controller: 'InitKey'
+  // setup an abstract state for the tabs directive
+    .state('tab', {
+    url: "/tab",
+    abstract: true,
+    templateUrl: "templates/tabs.html"
   })
 
-  .state('section', {
-       url: "/section",
-       templateUrl: "templates/section.html",
-       controller: 'SectionsCtrl'
+  // Each tab has its own nav history stack:
+
+  .state('tab.dash', {
+    url: '/dash',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+
+  .state('tab.chats', {
+      url: '/chats',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/tab-chats.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+    .state('tab.chat-detail', {
+      url: '/chats/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/chat-detail.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+
+  .state('tab.contacto', {
+    url: '/contacto',
+    views: {
+      'tab-contacto': {
+        templateUrl: 'templates/tab-contacto.html'
+        //controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.account', {
+    url: '/account',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/tab-account.html',
+        controller: 'AccountCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/section');
+  $urlRouterProvider.otherwise('/tab/dash');
 
-})
-
-.directive('browseTo', function ($ionicGesture) {
- return {
-  restrict: 'A',
-  link: function ($scope, $element, $attrs) {
-   var handleTap = function (e) {
-    // todo: capture Google Analytics here
-    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system');
-   };
-   var tapGesture = $ionicGesture.on('tap', handleTap, $element);
-   $scope.$on('$destroy', function () {
-    // Clean up - unbind drag gesture handler
-    $ionicGesture.off(tapGesture, 'tap', handleTap);
-   });
-  }
- }
 });
