@@ -9,12 +9,14 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+.controller('ChatDetailCtrl', function($scope) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('NoticiasCtrl', function($scope, Noticias) {
   $scope.settings = {
     enableFriends: true
   };
+
+  $scope.noticias = Noticias.get();
 });
