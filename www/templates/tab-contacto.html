@@ -1,9 +1,61 @@
 <ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Hola
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+  	<ion-content class="padding">
+
+	    <div class="list card">
+
+			<div class="item item-avatar">
+				<img src="img/logo-key.png">
+				<h2>Contacto</h2>
+	            <p>Conócenos más de cerca.</p>
+			</div>
+
+			<div class="form">
+				<form name="formulario" id="formulario">
+		    		
+		        	<div class="list">
+					  	<label class="item item-input item-stacked-label">
+					    	<span class="input-label">Nombre</span>
+					    	<input type="text" placeholder="Nombre y Apellido">
+					 	</label>
+					  	<label class="item item-input item-stacked-label">
+					    	<span class="input-label">Telefono</span>
+					    	<input type="text" placeholder="Telefono">
+					  	</label>				  	
+					  	<label class="item item-input item-stacked-label">
+					    	<span class="input-label">Email</span>
+					    	<input type="text" placeholder="nombre@dominio.com">
+					  	</label>
+					  	<label class="item item-input">
+						    <textarea placeholder="Escriba aqui su solicitud" rows="3"></textarea>
+						</label>
+					  	<label class="item item-input item-stacked-label"></label> 
+					</div>
+					
+					<div class="button-enviar">
+						<button class="button button-positive">
+		  					Enviar
+						</button>
+					</div>
+					
+	        	</form>
+			</div>
+
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item" href="#">
+				  	<i class="icon ion-social-facebook"></i>
+				</a>
+				<a class="tab-item" href="#">
+				  	<i class="icon ion-social-twitter"></i>
+				</a>
+				<a class="tab-item" href="#">
+				  	<i class="icon ion-social-youtube"></i>
+				</a>
+				<a class="tab-item" href="#">
+				  	<i class="icon ion-social-instagram"></i>
+				</a>
+			</div>
+
+		</div>
+
+  	</ion-content>
 </ion-view>
