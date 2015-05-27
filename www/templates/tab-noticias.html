@@ -1,10 +1,10 @@
 <ion-view view-title="Noticias">
   <ion-content>
     
-    <ion-list>
+    <ion-list ng-repeat="noticia in noticias">
 		<div class="item item-avatar">
 		    <img src="img/icon_movil.png">
-		    <h2>Titulo</h2>
+		    <h2>{{noticia.post_title}}</h2>
 		    <p>Fecha de Publicacion</p>
 	  	</div>
 
@@ -31,8 +31,6 @@
 			</a>
 		</div>
     </ion-list>
-
-	<p>{{noticias}}</p>
-  
+      
   </ion-content>
 </ion-view>

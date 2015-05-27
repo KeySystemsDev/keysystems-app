@@ -16,5 +16,7 @@ angular.module('starter.controllers', [])
   	};
 
   	$scope.noticias = Noticias.get();
-  	console.log($scope);
+
+  	console.log($scope.noticias);
+
 });

@@ -4,3 +4,9 @@
 	float: left; 
 	text-decoration:none;
 }
+.item-body {
+  	padding: 0px;
+}
+.button-enviar{
+	padding-bottom: 25px;
+}
