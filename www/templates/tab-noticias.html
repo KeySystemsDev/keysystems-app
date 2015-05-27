@@ -9,7 +9,7 @@
 	  	</div>
 
 	  	<div class="item item-body" style="padding: 0px;">
-		    <img class="full-image" src="{{ noticia.post_excerpt }}">
+		    <img class="full-image" ng-src="{{ noticia.post_excerpt }}">
 	  	</div>
 	  	<div class="item tabs tabs-secondary tabs-icon-left">
 			<a class="tab-item" href="#">
@@ -21,7 +21,7 @@
 			<a class="tab-item" href="#">
 			  	<i class="icon ion-social-instagram"></i>
 			</a>
-			<a class="tab-item" href="{{ noticia.guid }}">
+			<a class="tab-item" href="#" browse-to="{{ noticia.guid }}">
 			  	<i class="icon ion-android-arrow-forward"></i>
 			</a>
 		</div>
