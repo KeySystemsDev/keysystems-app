@@ -11,9 +11,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller('NoticiasCtrl', function($scope, Noticias) {
-  $scope.settings = {
-    enableFriends: true
-  };
+  	$scope.settings = {
+    	enableFriends: true
+  	};
 
-  $scope.noticias = Noticias.get();
+  	$scope.noticias = Noticias.get();
+  	console.log($scope);
 });
