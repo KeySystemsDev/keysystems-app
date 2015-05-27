@@ -4,17 +4,12 @@
     <ion-list ng-repeat="noticia in noticias">
 		<div class="item item-avatar">
 		    <img src="img/icon_movil.png">
-		    <h2>{{noticia.post_title}}</h2>
-		    <p>Fecha de Publicacion</p>
+		    <h2>{{ noticia.post_title }}</h2>
+		    <p>{{ noticia.post_date }}</p>
 	  	</div>
 
-	  	<div class="item item-body">
-		    <img class="full-image" src="http://placehold.it/512x512">
-		    <p>
-		      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-		      the content is from a card-body consisting of an image and paragraph text. The footer
-		      consists of tabs, icons aligned left, within the card-footer.
-		    </p>
+	  	<div class="item item-body" style="padding: 0px;">
+		    <img class="full-image" src="{{ noticia.post_excerpt }}">
 	  	</div>
 	  	<div class="item tabs tabs-secondary tabs-icon-left">
 			<a class="tab-item" href="#">
@@ -22,12 +17,12 @@
 			</a>
 			<a class="tab-item" href="#">
 			  	<i class="icon ion-social-twitter"></i>
-			</a>
-			<a class="tab-item" href="#">
-			  	<i class="icon ion-social-googleplus"></i>
-			</a>
+			</a>			
 			<a class="tab-item" href="#">
 			  	<i class="icon ion-social-instagram"></i>
+			</a>
+			<a class="tab-item" href="{{ noticia.guid }}">
+			  	<i class="icon ion-android-arrow-forward"></i>
 			</a>
 		</div>
     </ion-list>
