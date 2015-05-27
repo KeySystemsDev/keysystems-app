@@ -12,14 +12,9 @@
 		    <img class="full-image" ng-src="{{ noticia.post_excerpt }}">
 	  	</div>
 	  	<div class="item tabs tabs-secondary tabs-icon-left">
-			<a class="tab-item" href="#">
-			  	<i class="icon ion-social-facebook"></i>
-			</a>
-			<a class="tab-item" href="#">
-			  	<i class="icon ion-social-twitter"></i>
 			</a>			
-			<a class="tab-item" href="#">
-			  	<i class="icon ion-social-instagram"></i>
+			<a class="tab-item" href="#" ng-click="shareAnywhere({{ noticia.post_title }}, {{noticia.post_name}}, {{ noticia.post_excerpt }}, {{ noticia.guid }})">
+			  	<i class="icon ion-android-share-alt"></i>
 			</a>
 			<a class="tab-item" href="#" browse-to="{{ noticia.guid }}">
 			  	<i class="icon ion-android-arrow-forward"></i>
