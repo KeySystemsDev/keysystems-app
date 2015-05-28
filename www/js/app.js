@@ -48,21 +48,67 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+  .state('tab.web', {
+      url: '/web',
+      views: {
+        'tab-inicio': {
+          templateUrl: 'templates/inicio-web.html'
+        }
+      }
+    })
+
+  .state('tab.multiplataforma', {
+      url: '/multiplataforma',
+      views: {
+        'tab-inicio': {
+          templateUrl: 'templates/inicio-multiplataforma.html'
+        }
+      }
+    })
+
+  .state('tab.diseno', {
+      url: '/diseno',
+      views: {
+        'tab-inicio': {
+          templateUrl: 'templates/inicio-diseno.html'
+        }
+      }
+    })
+
+  .state('tab.logo', {
+      url: '/logo',
+      views: {
+        'tab-inicio': {
+          templateUrl: 'templates/inicio-logo.html'
+        }
+      }
+    })
+
+  .state('tab.3d', {
+      url: '/3d',
+      views: {
+        'tab-inicio': {
+          templateUrl: 'templates/inicio-3d.html'
+        }
+      }
+    })
+
+  .state('tab.social', {
+      url: '/social',
+      views: {
+        'tab-inicio': {
+          templateUrl: 'templates/inicio-social.html'
+        }
+      }
+    })
+
+
   .state('tab.planes', {
       url: '/planes',
       views: {
         'tab-planes': {
           templateUrl: 'templates/tab-planes.html',
           controller: 'PlanesCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
         }
       }
     })

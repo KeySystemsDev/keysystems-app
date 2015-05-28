@@ -16,8 +16,6 @@ angular.module('starter.controllers', [])
 
   	$scope.noticias = Noticias.get();
 
-  	console.log($scope.noticias);
-
   	$scope.shareAnywhere = function(message , subject, images, url) {
         $cordovaSocialSharing.share( message, subject, images, url);
     }
