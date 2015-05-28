@@ -1,5 +1,7 @@
 <ion-view view-title="Account">
   	<ion-content class="padding">
+	
+	
 
   		<div class="list card">
 
@@ -28,7 +30,20 @@
 
 		<div class="list card">
 
-			
+			<div id="map_canvas">
+			    <ui-gmap-google-map 
+			    	center="map.center" 
+			    	zoom="map.zoom"
+			    	draggable="false"
+			    	options="map.options">
+				        <ui-gmap-marker 
+				        		coords="map.marker"
+				        		idkey="map.id"
+				        		options="map.options"
+				        		draggable="true">
+				        </ui-gmap-marker>
+			    </ui-gmap-google-map>
+			</div>
 
 		</div>
 
