@@ -24,16 +24,17 @@ angular.module('starter.controllers', [])
 
 .controller('ContactoCtrl', function($scope) {
   	
-  	$scope.map = {  center: 
-                            {   latitude: 28.469389, 
-                                longitude:  -81.277089
-                            },
-                        marker: 
-                            {   latitude: 28.469389, 
-                                longitude:  -81.277089
-                            }, 
-                        zoom: 7, 
-                        id: 0,
-                        options: {scrollwheel: false}
-                    };
+  	$scope.map = {  
+        center: {   
+            latitude: 28.469389, 
+            longitude:  -81.277089
+        },
+        marker: {   
+            latitude: 28.469389, 
+            longitude:  -81.277089
+        }, 
+        zoom: 7, 
+        id: 0,
+        options: {scrollwheel: false}
+    };
 });

@@ -5,7 +5,7 @@
 		<div class="item item-avatar">
 		    <img src="img/icon_movil.png">
 		    <h2>{{ noticia.post_title }}</h2>
-		    <p>{{ noticia.post_date }}</p>
+		    <p>{{ noticia.post_date | date:'shortDate' }}</p>
 	  	</div>
 
 	  	<div class="item item-body" style="padding: 0px;">
