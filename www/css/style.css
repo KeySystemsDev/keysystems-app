@@ -42,3 +42,7 @@
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
   color: #444;
 }
+.img-app img{
+    width: 35px;
+    height: 35px;
+}
