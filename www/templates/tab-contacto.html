@@ -12,17 +12,17 @@
 			</div>
 
 			<div class="item item-icon-left">
-			    <i class="icon ion-ios-location-outline"></i>
+			    <i class="icon ion-ios-location color-444"></i>
 			    Dirección: Carrizal, Edo Miranda, Avenida Principal.
 			</div>
 
 			<a href="tel:+58 416-712.25.04" class="item item-icon-left">
-			    <i class="icon ion-ios-telephone-outline"></i>
+			    <i class="icon ion-ios-telephone color-444"></i>
 			    Teléfonos: +58 416-712.25.04
 			</a>
 
 			<a href="mailto:contacto@keysystems.com.ve" class="item item-icon-left">
-			    <i class="icon ion-ios-email-outline"></i>
+			    <i class="icon ion-ios-email color-444"></i>
 			    Correo: contacto@keysystems.com.ve
 			</a>
 
@@ -56,35 +56,36 @@
 			</div>
 
 			<div class="form">
-				<form name="formulario" id="formulario">
-		    		
-		        	<div class="list">
-					  	<label class="item item-input item-stacked-label">
-					    	<span class="input-label">Nombre</span>
-					    	<input type="text" placeholder="Nombre y Apellido">
-					 	</label>
-					  	<label class="item item-input item-stacked-label">
-					    	<span class="input-label">Telefono</span>
-					    	<input type="text" placeholder="Telefono">
-					  	</label>				  	
-					  	<label class="item item-input item-stacked-label">
-					    	<span class="input-label">Email</span>
-					    	<input type="text" placeholder="nombre@dominio.com">
-					  	</label>
-					  	<label class="item item-input">
-						    <textarea placeholder="Escriba aqui su solicitud" rows="3"></textarea>
-						</label>
-					  	<label class="item item-input item-stacked-label"></label> 
-					</div>
-					
-					<div class="button-enviar" align="center">
-						<button  class="button button-positive">
-		  					Enviar
-						</button>
-					</div>
-					
-	        	</form>
-			</div>
+			<form name="formulario" id="formulario">
+	    		
+	        	<div class="list">
+				  	<label class="item item-input item-stacked-label">
+				    	<span class="input-label">Nombre</span>
+				    	<input type="text" placeholder="Nombre y Apellido" id="i_nombre" name="nombre" ng-model="formData.i_nombre" required>
+				 	</label>
+				  	<label class="item item-input item-stacked-label">
+				    	<span class="input-label">Telefono</span>
+				    	<input type="number" placeholder="Telefono" id="i_telefono" name="telefono" ng-model="formData.i_telefono" required>
+				  	</label>				  	
+				  	<label class="item item-input item-stacked-label">
+				    	<span class="input-label">Email</span>
+				    	<input type="text" placeholder="nombre@dominio.com" id="i_correo" name="correo" ng-model="formData.i_correo" required>
+				  	</label>
+				  	<label class="item item-input">
+					    <textarea placeholder="Escriba aqui su solicitud" rows="3" id="i_mensaje" name="mensaje" ng-model="formData.i_mensaje" required></textarea>
+					</label>
+				  	<label class="item item-input item-stacked-label"></label>
+
+				</div>
+				
+				<div class="button-enviar">
+					<button class="button button-positive"type="submit" value="enviar" ng-disabled="formulario.$invalid" ng-click="enviar(formData)">
+	  					Enviar
+					</button>
+				</div>
+				
+        	</form>
+		</div>
 
 			<div class="item tabs tabs-secondary tabs-icon-left">
 				<a class="tab-item" href="#">

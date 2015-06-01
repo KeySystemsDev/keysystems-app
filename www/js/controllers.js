@@ -22,7 +22,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ContactoCtrl', function($scope) {
+.controller('ContactoCtrl', function($scope, $ionicPopup, Mensaje) {
   	 
   	$scope.map = {  
         center: {   
@@ -37,4 +37,24 @@ angular.module('starter.controllers', [])
         id: 0,
         options: {scrollwheel: false}
     };
+
+    $scope.formData = {i_correo_fijo : 'web@keysystems.com.ve'};
+
+    $scope.enviar = function(formData){
+      console.log(formData);
+
+      Mensaje.get(formData).$promise.then(function(data) {
+            
+                    $ionicPopup.alert({ title:    'Mensaje de Enviado',
+                                        template: 'El mensaje fue enviado.'});
+
+                    $scope.formData = {i_correo_fijo : 'web@keysystems.com.ve'};
+
+                }, function(error) {
+                    // error hand
+                    console.log(error);
+                    $ionicPopup.alert({ title:    'Mensaje de Error',
+                                        template: 'No se pudo enviar el mensaje.'});
+                });
+    }
 });
