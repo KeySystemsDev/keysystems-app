@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ContactoCtrl', function($scope, $ionicPopup, Mensaje) {
-  	 
+  	
   	$scope.map = {  
         center: {   
             latitude: 10.385488, 
