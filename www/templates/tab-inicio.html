@@ -1,5 +1,17 @@
 <ion-view view-title="Key Systems">
     <ion-content class="padding">
+
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true">
+            <ion-slide>
+                <div class="box img-slider"><img src="img/img-1.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box img-slider"><img src="img/img-2.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box img-slider"><img src="img/img-3.jpg"></div>
+            </ion-slide>
+        </ion-slide-box>
         
         <a class="col col-50 button-clear box-key" href="#tab/multiplataforma">
             <div class="item item-image" style="padding: 10px;">
