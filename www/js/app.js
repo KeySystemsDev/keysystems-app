@@ -133,6 +133,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'NoticiasCtrl'
       }
     }
+  })
+
+  .state('tab.aplicaciones', {
+    url: '/aplicaciones',
+    views: {
+      'tab-aplicaciones': {
+        templateUrl: 'templates/tab-aplicaciones.html',
+        //controller: 'NoticiasCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

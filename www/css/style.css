@@ -70,3 +70,8 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .box{
     height: 220px;
 }
+.box-app{
+    max-height: none;
+    float: left; 
+    text-decoration:none;
+}
