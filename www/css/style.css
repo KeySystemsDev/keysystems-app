@@ -122,6 +122,17 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .padding-0{
   padding: 0px;
 }
+/*tabs*/
+ion-tabs.tabs-color-active-positive .tab-item {
+  color: #0060B0;
+}
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  margin-top: -2px;
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: #0060B0;
+}
+
 
 /* barra tamaño*/
 .bar-header {
