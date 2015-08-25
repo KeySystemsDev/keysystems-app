@@ -148,7 +148,7 @@ angular.module('starter', [ 'ionic',
     views: {
       'tab-aplicaciones': {
         templateUrl: 'templates/tab-aplicaciones.html',
-        //controller: 'NoticiasCtrl'
+        controller: 'AplicacionesCtrl'
       }
     }
   });
