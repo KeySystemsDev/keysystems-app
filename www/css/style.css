@@ -1,4 +1,17 @@
 /* Empty. Add your own CSS if you like */
+.bar.bar-stable {
+  background: url('../img/bar.png');
+}
+.bar.bar-stable .title {
+  color: #fff;
+}
+.bar-stable .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 17px;
+}
 .box-key{
 	max-height: none;
 	float: left; 
@@ -26,12 +39,12 @@
     right: 0;
     left: 0;
 }
-.card, .list-inset {
+/*.card, .list-inset {
     overflow: hidden;
     margin: 0px 0px;
     border-radius: 2px;
     background-color: #fff;
-}
+}*/
 .padding{
     padding: 0px;
 }
@@ -75,3 +88,80 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     float: left; 
     text-decoration:none;
 }
+.card-planes{
+  margin: 10px 10px;
+}
+.planes-box{
+    padding: 0px;
+}
+.img-planes img{
+    width: 130px;
+    position: relative;
+    border-radius: 5px;
+}
+.text-nombre p{
+  font-size: 20px;
+  position: absolute;
+  left: 40%;
+  top:25%;
+  font-weight: bold;
+}
+.text-precio p {
+  font-size: 30px;
+  position: absolute;
+  left: 43%;
+  top:55%;
+}
+.icon-planes-descarga i{
+  font-size: 38px;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  color: #0060B0;
+}
+.padding-0{
+  padding: 0px;
+}
+
+/* barra tamaño*/
+.bar-header {
+  height: 55px !important;
+}
+.bar-header > *{
+  margin-top: 4px !important;
+}
+.has-header {
+   top: 56px;
+}
+/**/
+/* loading angular*/
+#loading-bar .bar {
+  background: #FFF;
+  margin-top: 53px;
+  height: 2px;
+  padding: 0px;
+}
+#loading-bar-spinner .spinner-icon {
+  border:  solid 2px transparent;
+  border-top-color:  #0060B0;
+  border-left-color: #0060B0;
+  width: 45px;
+  height: 45px;
+  
+}
+#loading-bar-spinner {
+    display: block;
+    position: absolute;
+    z-index: 10002;
+    left: 50%;
+    top:50%;
+    margin-left: -22.5px;
+    margin-top: -22.5px;
+}
+#loading-bar .peg {
+  -moz-box-shadow: #5f1d12 1px 0 6px 1px;
+  -ms-box-shadow: #5f1d12 1px 0 6px 1px;
+  -webkit-box-shadow: #5f1d12 1px 0 6px 1px;
+  box-shadow: #5f1d12 1px 0 6px 1px;
+}
+/**/

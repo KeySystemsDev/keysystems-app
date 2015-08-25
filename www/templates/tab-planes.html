@@ -1,86 +1,38 @@
 <ion-view view-title="Planes">
-  <ion-content>
-    
-        <div class="list">
-    
-            <div class="item item-divider">
-                Páginas Web
+    <ion-content>
+        
+        <ion-refresher refreshing-icon="dots" on-refresh="RecargarPlanes()"></ion-refresher>
+
+        <div class="card card-planes" ng-repeat="plan in planes">
+            <div class="item item-text-wrap planes-box">
+                <div class="row padding-0">
+                    <div class="col col-50">
+                        <div class="img-planes">
+                            <img ng-src="{{plan.img_plan}}">
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="text-nombre">
+                            <p>{{plan.nombre_plan}}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col col-75">
+                                <div class="text-precio">
+                                    <p>2.000 <i class="ion-social-usd-outline"></i></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="icon-planes-descarga">
+                                    <a browse-to="{{plan.archivo_plan}}">
+                                        <i class="ion-android-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/pagina-web-bronce/">
-                <img src="./img/planes/medalla_bronce.png">
-                <h2 style="margin-top: 15px;">Página Web Bronce</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/pagina-web-plata/">
-                <img src="./img/planes/medalla_silver.png">
-                <h2 style="margin-top: 15px;">Página Web Plata</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/pagina-web-oro/">
-                <img src="./img/planes/medalla_oro.png">
-                <h2 style="margin-top: 15px;">Página Web Oro</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-            <div class="item item-divider">
-                Tiendas Virtuales
-            </div>
-            
-
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/tienda-virtual-bronce/">
-                <img src="./img/planes/carrito_bronce.png">
-                <h2 style="margin-top: 15px;">Tienda Virtual Bronce</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/tienda-virtual-plata/">
-                <img src="./img/planes/carrito_silver.png">
-                <h2 style="margin-top: 15px;">Tienda Virtual Plata</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/tienda-virtual-oro/">
-                <img src="./img/planes/carrito_gold.png">
-                <h2 style="margin-top: 15px;">Tienda Virtual Oro</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-            <div class="item item-divider">
-                Logos
-            </div>
-            
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/arquitectura/">
-                <img src="./img/planes/medalla-bronce.png">
-                <h2 style="margin-top: 15px;">Logos Bronce</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/arquitectura/">
-                <img src="./img/planes/medalla-plata.png">
-                <h2 style="margin-top: 15px;">Logos Plata</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-
-            <a class="item item-thumbnail-left item-icon-right" href="#" browse-to="http://keysystems.com.ve/producto/arquitectura/">
-                <img src="./img/planes/medalla-oro.png">
-                <h2 style="margin-top: 15px;">Logos Oro</h2>
-                <p>Click para comprar</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-            
-
-      </div>
-              
-  </ion-content>
+        </div>
+      
+    </ion-content>
 </ion-view>

@@ -5,7 +5,13 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngResource', 'uiGmapgoogle-maps', 'ngCordova'])
+angular.module('starter', [ 'ionic', 
+                            'starter.controllers', 
+                            'starter.services', 
+                            'ngResource', 
+                            'uiGmapgoogle-maps', 
+                            'ngCordova',
+                            'chieffancypants.loadingBar'])
 
 .run(function($ionicPlatform) {
 
@@ -22,8 +28,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, cfpLoadingBarProvider) {
   
+  cfpLoadingBarProvider.includeSpinner = true;
+
   $ionicConfigProvider.tabs.position('bottom')
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
