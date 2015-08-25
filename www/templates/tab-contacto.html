@@ -1,13 +1,28 @@
 <ion-view view-title="Contacto">
   	<ion-content class="padding">
 	
-  		<div class="list card">
-
-			<div class="item item-avatar">
-				<img src="img/logo_key_negro.png">
-				<h2>Key Systems </h2>
-	            <p>Refleja tus ideas...</p>
-			</div>
+  		<div class="list">
+			
+			<div id="banner"/>
+                <img ng-src="img/fondo-perfil.jpg" alt="">
+            </div>
+			
+			<ion-slide-box on-slide-changed="slideHasChanged($index)">
+                <ion-slide class="profile">
+                    <div class="profile-picture">
+                        <img ng-src="img/logo-profile.jpg"/>
+                    </div>
+                    <div class="box-white">
+                    	<h4>Key Systems</h4>
+                    </div>
+                </ion-slide>
+                <ion-slide class="profile">
+                    <div class="box-white">
+                    	<p>Refleja tus ideas...</p>
+                    </div>
+                    <div class="box-white"><h5>RIF:</b> J-40162924-5</h5></div>
+                </ion-slide>
+            </ion-slide-box>
 
 			<div class="item item-icon-left">
 			    <i class="icon ion-ios-location color-444"></i>
@@ -23,11 +38,7 @@
 			    <i class="icon ion-ios-email color-444"></i>
 			    Correo: contacto@keysystems.com.ve
 			</a>
-
-		</div>
-
-		<div class="list card">
-
+			
 			<div id="map_canvas">
 			    <ui-gmap-google-map 
 			    	center="map.center" 
@@ -45,7 +56,22 @@
 
 		</div>
 
-	    <div class="list card">
+		<div class="item tabs tabs-secondary tabs-icon-left tab-social">
+			<a class="tab-item" href="#" browse-to="https://www.facebook.com/KeySystems.ca">
+			  	<i class="icon ion-social-facebook"></i>
+			</a>
+			<a class="tab-item" href="#" browse-to="https://twitter.com/KeySystemsCA">
+			  	<i class="icon ion-social-twitter"></i>
+			</a>
+			<a class="tab-item" href="#" browse-to="https://www.youtube.com/user/KeySystemsCa">
+			  	<i class="icon ion-social-youtube"></i>
+			</a>
+			<a class="tab-item" href="#" browse-to="https://instagram.com/keysystemsca/">
+			  	<i class="icon ion-social-instagram"></i>
+			</a>
+		</div>
+
+	    <!--<div class="list card">
 
 			<div class="item item-avatar">
 				<img src="img/logo_key_negro.png">
@@ -83,24 +109,7 @@
 				</div>
 				
         	</form>
-		</div>
-
-			<div class="item tabs tabs-secondary tabs-icon-left">
-				<a class="tab-item" href="#" browse-to="https://www.facebook.com/KeySystems.ca">
-				  	<i class="icon ion-social-facebook"></i>
-				</a>
-				<a class="tab-item" href="#" browse-to="https://twitter.com/KeySystemsCA">
-				  	<i class="icon ion-social-twitter"></i>
-				</a>
-				<a class="tab-item" href="#" browse-to="https://www.youtube.com/user/KeySystemsCa">
-				  	<i class="icon ion-social-youtube"></i>
-				</a>
-				<a class="tab-item" href="#" browse-to="https://instagram.com/keysystemsca/">
-				  	<i class="icon ion-social-instagram"></i>
-				</a>
-			</div>
-
-		</div>
+		</div>-->
 
   	</ion-content>
 </ion-view>
