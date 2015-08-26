@@ -84,12 +84,12 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ContactoCtrl', function($scope) {
+.controller('ContactoCtrl', function($scope, $window) {
 
     $scope.openGeo = function(latitude, longitude, latitude_go, longitude_go) {
         $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=' + latitude_go + ',' + longitude_go + '(Treasure)', '_system', 'location=yes');
     };
-    
+
   	$scope.map = {  
         center: {   
             latitude: 10.385488, 
