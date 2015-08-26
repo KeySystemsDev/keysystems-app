@@ -25,11 +25,14 @@
 }
 
 #map_canvas {
-    height: 200px;
+    height: 400px;
     width: 100%;
     margin: 0px;
 }
 #map_canvas {
+    height: 275px;
+    width: 100%;
+    margin: 0px;
     position: relative;
 }    
 .angular-google-map-container {
@@ -182,7 +185,7 @@ ion-tabs.tabs-color-active-positive .tab-item {
 }
 .button-nav-bar{
   padding: 0px;
-  padding-right: 4px;
+  padding-right: 6px;
 }
 .item-direcion{
   white-space: normal;

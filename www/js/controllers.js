@@ -1,7 +1,17 @@
 angular.module('starter.controllers', [])
 
-.controller('InicioCtrl', function($scope) {
-	
+.controller('InicioCtrl', function($scope, $rootScope, $cordovaGeolocation) {
+	//Encuentra pocion de la persona al entrar
+    var posOptions = {timeout: 10000, enableHighAccuracy: true};
+    
+    $cordovaGeolocation.getCurrentPosition(posOptions)
+        .then(function (position) {
+              $rootScope.lat  = position.coords.latitude;
+              $rootScope.long = position.coords.longitude;
+        }, function(err) {
+            // error
+    });
+    //*-------------------------------------------------
 })
 
 .controller('PlanesCtrl', function($scope, $ionicPopup, $http, Planes) {
@@ -75,7 +85,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ContactoCtrl', function($scope) {
-  	
+
+    $scope.openGeo = function(latitude, longitude, latitude_go, longitude_go) {
+        $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=' + latitude_go + ',' + longitude_go + '(Treasure)', '_system', 'location=yes');
+    };
+    
   	$scope.map = {  
         center: {   
             latitude: 10.385488, 

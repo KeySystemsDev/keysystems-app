@@ -1,0 +1,33 @@
+<ion-view view-title="Contacto">
+  	
+	<ion-nav-buttons side="right">
+        <div class="row button-nav-bar">
+            
+			<div class="col button-nav-bar">
+                <a class="button button-icon button-clear button-conf" ng-click="openGeo( lat, long, map.marker.latitude, map.marker.longitude)" ng-href="geo:{{lat}},{{long}}?z=6&q={{map.marker.latitude}},{{map.marker.longitude}}(Treasure)">
+                    <i class="icon ion-android-locate"></i>
+                </a>
+            </div>
+
+        </div> 
+    </ion-nav-buttons>
+
+  	<ion-content scroll="false">
+		
+		<div id="map_canvas_detalle">
+			    <ui-gmap-google-map 
+			    	center="map.center" 
+			    	zoom="map.zoom"
+			    	draggable="false"
+			    	options="map.options">
+				        <ui-gmap-marker 
+				        		coords="map.marker"
+				        		idkey="map.id"
+				        		options="map.options"
+				        		draggable="true">
+				        </ui-gmap-marker>
+			    </ui-gmap-google-map>
+			</div>
+  		
+  	</ion-content>
+</ion-view>

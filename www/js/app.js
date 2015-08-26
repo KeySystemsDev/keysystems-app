@@ -143,6 +143,16 @@ angular.module('starter', [ 'ionic',
     }
   })
 
+  .state('tab.mapa', {
+    url: '/mapa',
+    views: {
+      'tab-contacto': {
+        templateUrl: 'templates/mapa.html',
+        controller: 'ContactoCtrl'
+      }
+    }
+  })
+
   .state('tab.noticias', {
     url: '/noticias',
     views: {
