@@ -133,6 +133,16 @@ angular.module('starter', [ 'ionic',
     }
   })
 
+  .state('tab.formulario', {
+    url: '/formulario',
+    views: {
+      'tab-contacto': {
+        templateUrl: 'templates/formulario.html',
+        controller: 'FormularioCtrl'
+      }
+    }
+  })
+
   .state('tab.noticias', {
     url: '/noticias',
     views: {

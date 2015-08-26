@@ -74,7 +74,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ContactoCtrl', function($scope, $ionicPopup, Mensaje) {
+.controller('ContactoCtrl', function($scope) {
   	
   	$scope.map = {  
         center: {   
@@ -89,18 +89,22 @@ angular.module('starter.controllers', [])
         id: 0,
         options: {scrollwheel: false}
     };
+})
+
+.controller('FormularioCtrl', function($scope, $state, $ionicPopup, Mensaje) {
 
     $scope.formData = {i_correo_fijo : 'web@keysystems.com.ve'};
 
     $scope.enviar = function(formData){
-      console.log(formData);
 
-      Mensaje.get(formData).$promise.then(function(data) {
+        Mensaje.get(formData).$promise.then(function(data) {
             
                     $ionicPopup.alert({ title:    'Mensaje de Enviado',
                                         template: 'El mensaje fue enviado.'});
 
                     $scope.formData = {i_correo_fijo : 'web@keysystems.com.ve'};
+
+                    $state.go('tab.contacto');
 
                 }, function(error) {
                     // error hand
