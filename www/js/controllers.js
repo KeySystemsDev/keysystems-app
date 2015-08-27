@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('InicioCtrl', function($scope, $rootScope, $cordovaGeolocation) {
+.controller('InicioCtrl', function($scope, $rootScope, $cordovaGeolocation, $http, $ionicSlideBoxDelegate, Slider) {
 	//Encuentra pocion de la persona al entrar
     var posOptions = {timeout: 10000, enableHighAccuracy: true};
     
@@ -12,6 +12,34 @@ angular.module('starter.controllers', [])
             // error
     });
     //*-------------------------------------------------
+
+    Slider.get()
+        .$promise.then(function(data) {
+            $scope.sliders = data;
+            $ionicSlideBoxDelegate.update();
+
+        }, function(error) {
+            if ( error.status === 0 || error.status === 404 ) {
+                $ionicPopup.alert({ title:    'Error de Conexión',
+                                    template: 'No es posible establecer conexión a Internet.'});
+            }
+        });
+
+    $scope.RecargarSlider = function(){
+        $http.get("http://keypanelservices.com/app/key-systems/consultar_slider.php")
+            .success(function(data) {
+                $scope.sliders = data;
+                $ionicSlideBoxDelegate.update();
+            })
+            .error(function (data, status) {
+                if ( status === 0 || status === 404 ) {
+                    $ionicPopup.alert({ title:    'Mensaje de Error',
+                                        template: 'Error de Conección'});
+                }
+            }).finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    };
 })
 
 .controller('PlanesCtrl', function($scope, $ionicPopup, $http, Planes) {
