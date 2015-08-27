@@ -14,7 +14,11 @@
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0"
   },
-  "cordovaPlugins": [],
+  "cordovaPlugins": [
+    "nl.x-services.plugins.socialsharing",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.inappbrowser"
+  ],
   "cordovaPlatforms": [
     "android"
   ]
