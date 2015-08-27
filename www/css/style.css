@@ -98,28 +98,28 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     padding: 0px;
 }
 .img-planes img{
-    width: 130px;
+    width: 110px;
     position: relative;
     border-radius: 5px;
 }
 .text-nombre p{
-  font-size: 20px;
+  font-size: 14px;
   position: absolute;
-  left: 40%;
+  left: 35%;
   top:25%;
   font-weight: bold;
 }
 .text-precio p {
-  font-size: 30px;
+  font-size: 33px;
   position: absolute;
-  left: 43%;
-  top:55%;
+  left: 35%;
+  top:48%;
 }
 .icon-planes-descarga i{
-  font-size: 38px;
+  font-size: 52px;
   position: absolute;
   right: 15px;
-  bottom: 10px;
+  bottom: 28px;
   color: #0060B0;
 }
 .padding-0{
