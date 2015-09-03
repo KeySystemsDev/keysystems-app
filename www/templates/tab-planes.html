@@ -6,26 +6,39 @@
         <div class="card card-planes" ng-repeat="plan in planes">
             <div class="item item-text-wrap planes-box">
                 <div class="row padding-0">
-                    <div class="col col-50">
-                        <div class="img-planes">
-                            <img ng-src="{{plan.img_plan}}">
+                    <div class="col col-33 col-custon">
+                        
+                        <div class="verticalLine">
+                            <div class="img-planes">
+                                <img ng-src="{{plan.img_plan}}">
+                            </div>
                         </div>
                     </div>
-                    <div class="col col-50">
+                    <div class="col col-67 col-custon">
                         <div class="text-nombre">
                             <p>{{plan.nombre_plan}}</p>
                         </div>
                         <div class="row">
-                            <div class="col col-75">
+                            <div class="col col-75 col-custon">
                                 <div class="text-precio">
                                     <p>2.000 <i class="ion-social-usd-outline"></i></p>
                                 </div>
+                                <div class="start-rating">
+                                    <fieldset class="rating">           
+                                        <input type="radio" id="star1" name="i_categoria" value="1" ng-model="dato.categoria_hotel" disabled/><label for="star5" title="Rocks!">1 stars</label>
+                                        <input type="radio" id="star2" name="i_categoria" value="2" ng-model="dato.categoria_hotel" disabled/><label for="star4" title="Pretty good">2 stars</label>
+                                        <input type="radio" id="star3" name="i_categoria" value="3" ng-model="dato.categoria_hotel" disabled/><label for="star3" title="Meh">3 stars</label>
+                                    </fieldset>
+                                <div>
                             </div>
                             <div class="col">
                                 <div class="icon-planes-descarga">
                                     <a browse-to="{{plan.archivo_plan}}">
-                                        <i class="ion-android-download"></i>
+                                        <i class="ion-ios-cloud-download-outline"></i>
                                     </a>
+                                </div>
+                                <div class="text-descarga">
+                                    <p>Descarga</p>
                                 </div>
                             </div>
                         </div>

@@ -98,29 +98,45 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     padding: 0px;
 }
 .img-planes img{
-    width: 110px;
+    width: 105px;
     position: relative;
     border-radius: 5px;
 }
 .text-nombre p{
-  font-size: 14px;
-  position: absolute;
-  left: 35%;
-  top:25%;
-  font-weight: bold;
+    font-size: 17px;
+    position: absolute;
+    left: 35%;
+    top: 0%;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .text-precio p {
-  font-size: 33px;
-  position: absolute;
-  left: 35%;
-  top:48%;
+    font-size: 28px;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+}
+.text-descarga p{
+    font-size: 12px;
+    position: absolute;
+    left: 83%;
+    top: 58%;
 }
 .icon-planes-descarga i{
-  font-size: 52px;
-  position: absolute;
-  right: 15px;
-  bottom: 28px;
-  color: #0060B0;
+    font-size: 35px;
+    position: absolute;
+    right: 15px;
+    bottom: 33px;
+    color: #0060B0;
+    border-radius: 50%;
+    border: 1px solid #0060B0;
+    width: 40px;
+    text-align: center;
+}
+.start-rating fieldset{
+    position: absolute;
+    left: 33%;
+    bottom: 16px;
 }
 .padding-0{
   padding: 0px;
@@ -190,8 +206,14 @@ ion-tabs.tabs-color-active-positive .tab-item {
 .item-direcion{
   white-space: normal;
 }
-
-
+.verticalLine {
+    border-right: 1px solid #ddd;
+}
+.col.col-custon {
+  padding: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
 
 /* barra tamaño*/
 .bar-header {
@@ -235,3 +257,64 @@ ion-tabs.tabs-color-active-positive .tab-item {
   box-shadow: #5f1d12 1px 0 6px 1px;
 }
 /**/
+
+fieldset {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    /*top:-9999px;*/
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:25px;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:150%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: gold;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}   
