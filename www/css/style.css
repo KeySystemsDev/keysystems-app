@@ -98,9 +98,10 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     padding: 0px;
 }
 .img-planes img{
-    width: 90px;
+    width: 100%;
     position: relative;
     border-radius: 5px;
+    padding: 5px;
 }
 .text-nombre p{
     font-size: 14px;
