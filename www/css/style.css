@@ -103,6 +103,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     border-radius: 5px;
     padding: 5px;
 }
+
 .text-nombre p{
     font-size: 14px;
     position: absolute;
@@ -110,6 +111,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     top: 0%;
     font-weight: bold;
     text-transform: uppercase;
+    width: 100%;
 }
 .text-precio p {
     font-size: 20px;
@@ -126,8 +128,8 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .icon-planes-descarga i{
     font-size: 35px;
     position: absolute;
-    right: 15px;
-    bottom: 33px;
+    bottom: 38%;
+    right: 4%;
     color: #0060B0;
     border-radius: 50%;
     border: 1px solid #0060B0;
