@@ -214,6 +214,10 @@ ion-tabs.tabs-color-active-positive .tab-item {
   padding-right: 5px;
   padding-left: 5px;
 }
+.img-app-key{
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /* barra tamaño*/
 .bar-header {
