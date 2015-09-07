@@ -126,7 +126,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     top: 58%;
 }
 .icon-planes-descarga i{
-    font-size: 35px;
+    font-size: 34px;
     position: absolute;
     bottom: 38%;
     right: 4%;
@@ -134,6 +134,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     border-radius: 50%;
     border: 1px solid #0060B0;
     width: 40px;
+    height: 40px;
     text-align: center;
 }
 .start-rating fieldset{
@@ -294,7 +295,7 @@ fieldset {
     font-size:140%;
     line-height:1.2;
     color:#ddd;
-    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+    /*text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating:not(:checked) > label:before {
@@ -303,13 +304,13 @@ fieldset {
 
 .rating > input:checked ~ label {
     color: gold;
-    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+    /*text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
     color: gold;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    /*text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating > input:checked + label:hover,
@@ -318,7 +319,7 @@ fieldset {
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
     color: #ea0;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    /*text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating > label:active {

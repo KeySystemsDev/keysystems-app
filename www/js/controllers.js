@@ -136,7 +136,7 @@ angular.module('starter.controllers', [])
 
 .controller('FormularioCtrl', function($scope, $state, $ionicPopup, Mensaje) {
 
-    $scope.formData = {i_correo_fijo : 'web@keysystems.com.ve'};
+    $scope.formData = {i_correo_fijo : 'contacto@keysystems.com.ve'};
 
     $scope.enviar = function(formData){
 
@@ -145,7 +145,7 @@ angular.module('starter.controllers', [])
                     $ionicPopup.alert({ title:    'Mensaje de Enviado',
                                         template: 'El mensaje fue enviado.'});
 
-                    $scope.formData = {i_correo_fijo : 'web@keysystems.com.ve'};
+                    $scope.formData = {i_correo_fijo : 'contacto@keysystems.com.ve'};
 
                     $state.go('tab.contacto');
 
