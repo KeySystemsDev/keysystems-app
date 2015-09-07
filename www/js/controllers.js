@@ -34,7 +34,7 @@ angular.module('starter.controllers', [])
             .error(function (data, status) {
                 if ( status === 0 || status === 404 ) {
                     $ionicPopup.alert({ title:    'Mensaje de Error',
-                                        template: 'Error de Conección'});
+                                        template: 'Error de conexión'});
                 }
             }).finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');
@@ -48,6 +48,7 @@ angular.module('starter.controllers', [])
     Planes.get()
         .$promise.then(function(data) {
             $scope.planes = data;
+            console.log(data);
 
         }, function(error) {
             if ( error.status === 0 || error.status === 404 ) {
@@ -64,7 +65,7 @@ angular.module('starter.controllers', [])
             .error(function (data, status) {
                 if ( status === 0 || status === 404 ) {
                     $ionicPopup.alert({ title:    'Mensaje de Error',
-                                        template: 'Error de Conección'});
+                                        template: 'Error de conexión'});
                 }
             }).finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');
@@ -94,7 +95,7 @@ angular.module('starter.controllers', [])
             .error(function (data, status) {
                 if ( status === 0 || status === 404 ) {
                     $ionicPopup.alert({ title:    'Mensaje de Error',
-                                        template: 'Error de Conección'});
+                                        template: 'Error de conexión'});
                 }
             }).finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');
