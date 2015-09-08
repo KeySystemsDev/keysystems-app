@@ -48,7 +48,6 @@ angular.module('starter.controllers', [])
     Planes.get()
         .$promise.then(function(data) {
             $scope.planes = data;
-            console.log(data);
 
         }, function(error) {
             if ( error.status === 0 || error.status === 404 ) {
@@ -136,7 +135,7 @@ angular.module('starter.controllers', [])
 
 .controller('FormularioCtrl', function($scope, $state, $ionicPopup, Mensaje) {
 
-    $scope.formData = {i_correo_fijo : 'contacto@keysystems.com.ve'};
+    $scope.formData = {};
 
     $scope.enviar = function(formData){
 
@@ -145,7 +144,7 @@ angular.module('starter.controllers', [])
                     $ionicPopup.alert({ title:    'Mensaje de Enviado',
                                         template: 'El mensaje fue enviado.'});
 
-                    $scope.formData = {i_correo_fijo : 'contacto@keysystems.com.ve'};
+                    $scope.formData = {};
 
                     $state.go('tab.contacto');
 

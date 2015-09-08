@@ -326,4 +326,18 @@ fieldset {
     position:relative;
     top:2px;
     left:2px;
-}   
+} 
+
+/*Modal*/
+.popup-container.active .popup {
+  -webkit-animation-name: superScaleIn;
+  animation-name: superScaleIn;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  border-radius: 5px;
+  text-align: center;
+}
