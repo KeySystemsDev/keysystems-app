@@ -112,7 +112,11 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ContactoCtrl', function($scope, $window) {
+.controller('ContactoCtrl', function($scope, $window, $cordovaSocialSharing) {
+
+    $scope.shareAnywhere = function() {
+        $cordovaSocialSharing.share( "Key Systems", "Key Systems", "http://keypanelservices.com/app/key-systems/compartir/logo.png", "https://play.google.com/store/apps/details?id=com.ionicframework.keysystems549574");
+    }
 
     $scope.openGeo = function(latitude, longitude, latitude_go, longitude_go) {
         $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=' + latitude_go + ',' + longitude_go + '(Treasure)', '_system', 'location=yes');
