@@ -1,0 +1,14 @@
+<ion-view view-title="Aplicaciones">
+  	<ion-content>
+
+        <ion-refresher refreshing-icon="dots" on-refresh="RecargarApp()"></ion-refresher>
+ 
+      	<a class="col col-50 button-clear box-app" ng-repeat="app in aplicaciones" browse-to="{{app.enlace_app}}">
+            <div class="item item-image img-app-key">
+                <img ng-src="{{app.img_app}}">
+            </div>
+        </a>
+        
+    
+  	</ion-content>
+</ion-view>

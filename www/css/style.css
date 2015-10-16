@@ -1,4 +1,10 @@
 /* Empty. Add your own CSS if you like */
+a:link {   
+ text-decoration:none;
+} 
+a{
+  color: #444;
+}
 .bar.bar-stable {
   background: url('../img/bar.png');
 }
@@ -339,5 +345,43 @@ fieldset {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   border-radius: 5px;
+  text-align: center;
+}
+
+.platform-android .card--expand.card .item:first-child.item-divider, .platform-android .card--expand.list-inset .item:first-child.item-divider, .platform-android .card.card--expand .item:first-child.item-divider, .platform-override .card--expand.card .item:first-child.item-divider, .platform-override .card--expand.list-inset .item:first-child.item-divider, .platform-override .card.card--expand .item:first-child.item-divider {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 208px;
+}
+
+.mdl-card__title-text, .platform-android .card .item:first-child.item-divider h1, .platform-android .card .item:first-child.item-divider h2, .platform-android .card .item:first-child.item-divider h3, .platform-android .card .item:first-child.item-divider h4, .platform-android .card .item:first-child.item-divider h5, .platform-android .item.item-avatar h1, .platform-android .item.item-avatar h2, .platform-android .item.item-avatar h3, .platform-android .item.item-avatar h4, .platform-android .item.item-avatar h5, .platform-android .list-inset .item:first-child.item-divider h1, .platform-android .list-inset .item:first-child.item-divider h2, .platform-android .list-inset .item:first-child.item-divider h3, .platform-android .list-inset .item:first-child.item-divider h4, .platform-android .list-inset .item:first-child.item-divider h5, .platform-override .card .item:first-child.item-divider h1, .platform-override .card .item:first-child.item-divider h2, .platform-override .card .item:first-child.item-divider h3, .platform-override .card .item:first-child.item-divider h4, .platform-override .card .item:first-child.item-divider h5, .platform-override .item.item-avatar h1, .platform-override .item.item-avatar h2, .platform-override .item.item-avatar h3, .platform-override .item.item-avatar h4, .platform-override .item.item-avatar h5, .platform-override .list-inset .item:first-child.item-divider h1, .platform-override .list-inset .item:first-child.item-divider h2, .platform-override .list-inset .item:first-child.item-divider h3, .platform-override .list-inset .item:first-child.item-divider h4, .platform-override .list-inset .item:first-child.item-divider h5 {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  color: inherit;
+  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  overflow: hidden;
+  -webkit-transform-origin: 149px 48px;
+  transform-origin: 149px 48px;
+  margin: 0;
+}
+
+.platform-android .card .item.item-text-wrap, .platform-android .list-inset .item.item-text-wrap, .platform-override .card .item.item-text-wrap, .platform-override .list-inset .item.item-text-wrap {
+  width: 100%;
+}
+
+.icon-left i{
+  position: absolute;
+  right: 20px;
+}
+
+.text-center{
   text-align: center;
 }

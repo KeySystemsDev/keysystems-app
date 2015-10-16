@@ -3,11 +3,46 @@
 
         <ion-refresher refreshing-icon="dots" on-refresh="RecargarApp()"></ion-refresher>
  
-      	<a class="col col-50 button-clear box-app" ng-repeat="app in aplicaciones" browse-to="{{app.enlace_app}}">
+      	<!--<a class="col col-50 button-clear box-app" ng-repeat="app in aplicaciones" browse-to="{{app.enlace_app}}">
             <div class="item item-image img-app-key">
                 <img ng-src="{{app.img_app}}">
             </div>
-        </a>
+        </a>-->
+
+        <div class="card card--expand">
+            <div class="item item-divider" style="background: url('http://www.adslzone.net/app/uploads/2015/01/Android-5.0-Lollipop.png') center / cover; color: white;">
+            </div>
+            <div class="item item-text-wrap icon-left">
+                <a href="#/tab/aplicaciones-detalle">
+                	Aplicaciones Moviles ks
+                	<i class="ion-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="card card--expand">
+            <div class="item item-divider" style="background: url('http://keysystemsca.com.ve/wp-content/uploads/2015/05/dise%C3%B1o-de-aplicaciones-para-tel%C3%A9fonos.jpg') center / cover; color: white;">
+            </div>
+            <div class="item item-text-wrap icon-left">
+                <a href="#/tab/aplicaciones-detalle">
+	                Páginas Web ks
+	                <i class="ion-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="card card--expand">
+            <div class="item item-divider" style="background: url('http://dmhdwallpapers.com/wp-content/uploads/2015/02/Cool-Computer-Wallpaper1.jpg') center / cover; color: white;">
+            </div>
+            <div class="item item-text-wrap icon-left">
+                <a href="#/tab/aplicaciones-detalle">
+	                Iconografía Ks
+	                <i class="ion-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        
     
   	</ion-content>
 </ion-view>

@@ -102,6 +102,36 @@ angular.module('starter.controllers', [])
     };
 })
 
+.controller('AplicacionesDetallesCtrl', function($scope, $ionicPopup, $http, Aplicaciones) {
+    console.log("AplicacionesDetallesCtrl");
+
+    Aplicaciones.get()
+        .$promise.then(function(data) {
+            $scope.aplicaciones = data;
+
+        }, function(error) {
+            if ( error.status === 0 || error.status === 404 ) {
+                $ionicPopup.alert({ title:    'Error de Conexión',
+                                    template: 'No es posible establecer conexión a Internet.'});
+            }
+        });
+
+    $scope.RecargarApp = function(){
+        $http.get("http://keypanelservices.com/app/key-systems/consulta_app.php")
+            .success(function(data) {
+                $scope.aplicaciones = data;
+            })
+            .error(function (data, status) {
+                if ( status === 0 || status === 404 ) {
+                    $ionicPopup.alert({ title:    'Mensaje de Error',
+                                        template: 'Error de conexión'});
+                }
+            }).finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    };
+})
+
 .controller('NoticiasCtrl', function($scope, Noticias, $cordovaSocialSharing) {
 
   	$scope.noticias = Noticias.get();

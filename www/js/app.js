@@ -171,6 +171,16 @@ angular.module('starter', [ 'ionic',
         controller: 'AplicacionesCtrl'
       }
     }
+  })
+
+  .state('tab.aplicaciones-detalle', {
+    url: '/aplicaciones-detalle',
+    views: {
+      'tab-aplicaciones': {
+        templateUrl: 'templates/tab-aplicaciones-detalle.html',
+        controller: 'AplicacionesDetallesCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
